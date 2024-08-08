@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<style>
+
+    body {
+    font-family: 'Arial', sans-serif;
+    }
+
+    .form-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-header {
+    margin-bottom: 20px;
+    }
+
+    .form-header img {
+    margin-right: 10px;
+    }
+
+    .form-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    }
+
+    .form-group {
+    margin-bottom: 15px;
+    }
+    
+    .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    }
+
+    .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    }
+
+    .form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    .form-group .checkbox {
+    display: flex;
+    align-items: center;
+    }
+    .form-group .checkbox input {
+    margin-right: 10px;
+    }
+    .form-group .checkbox label {
+    margin: 0;
+    }
+    .form-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+    .form-button:hover {
+    background-color: #0056b3;
+    }
+    .form-footer {
+    margin-top: 15px;
+    text-align: center;
+    }
+    .form-footer a {
+    color: #007bff;
+    text-decoration: none;
+    }
+    .form-footer a:hover {
+    text-decoration: underline;
+    }
+
+    input{
+            width: 100%;
+            border-radius: 0.375rem;
+            border: none;
+            padding: 0.75rem;
+            color: #1f2937;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            outline: 1px inset #d1d5db;
+            transition: outline 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus{
+            outline: 2px solid #6366f1;
+            box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+        }
+
+</style>
+<body>
+    
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-md bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-center text-3xl font-extrabold text-gray-900">Login</h2>
+  
+      <form class="mt-8 space-y-6" action="#" method="POST">
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <div class="mt-1">
+            <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 " formControlName="email">
+          </div>
+        </div>
+  
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+          <div class="mt-1">
+            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 " formControlName="contraseña">
+          </div>
+        </div>
+  
+        <div>
+          <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Ingresar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+</body>
+</html>

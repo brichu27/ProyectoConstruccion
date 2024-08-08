@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            border-radius: 0.375rem;
+            border: none;
+            padding: 0.75rem;
+            color: #1f2937;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            outline: 1px inset #d1d5db;
+            transition: outline 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, textarea:focus {
+            outline: 2px solid #6366f1;
+            box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+        }
+
+        button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.375rem;
+            background-color: #4f46e5;
+            padding: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        button:focus-visible {
+            outline: 2px solid #6366f1;
+            outline-offset: 2px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="flex min-h-screen flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Generar Reserva</h2>
+        </div>
+
+        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+            <div class="card">
+                <form class="space-y-6" action="#" method="POST">
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <div class="mt-1">
+                            <input id="nombre" name="nombre" type="text" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 ">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="apellidos" class="block text-sm font-medium text-gray-700">Apellidos</label>
+                        <div class="mt-1">
+                            <input id="apellidos" name="apellidos" type="text" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 ">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <div class="mt-1">
+                            <input id="email" name="email" type="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 ">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="comentario" class="block text-sm font-medium text-gray-700">Comentario</label>
+                        <div class="mt-1">
+                            <textarea name="comentario" id="comentario" placeholder="Aquí puede expresar para cuántas personas es la mesa y si tiene niños incluidos" rows="3" required></textarea>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit">Reservar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
